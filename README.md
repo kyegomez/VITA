@@ -10,6 +10,28 @@
 
 ---
 
+
+
+### Usage
+
+```python
+from audio_encoder import AudioEncoderVita
+
+# Example usage:
+if __name__ == "__main__":
+    # Assume 2 seconds of audio with 16kHz sample rate
+    audio_input = torch.randn(
+        8, 32000
+    )  # batch_size = 8, num_samples = 32000
+
+    model = AudioEncoderVita()
+    output = model(audio_input)
+    print(
+        output.shape
+    )  # Should output (batch_size, num_tokens, output_dim)
+
+```
+
 ## 🔥 News
 * **`2024.08.12`** 🌟 We are very proud to launch VITA, the **First-Ever** open-source interactive omni multimodal LLM! All training code, deployment code, and model weights will be released soon! The open source process requires some flow, stay tuned!
 
